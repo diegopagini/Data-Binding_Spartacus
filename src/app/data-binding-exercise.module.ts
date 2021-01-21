@@ -23,16 +23,16 @@ import { ProductVariantsComponent } from '@spartacus/storefront';
       },
     } as CmsConfig),
   ],
-  // providers: [
-  //   {
-  //     provide: ProductAdapter,
-  //     useExisting: BestbuyProductAdapter,
-  //   },
-  //   {
-  //     provide: PRODUCT_NORMALIZER,
-  //     useExisting: BestbuyProductNormalizer,
-  //     multi: true,
-  //   },
-  // ],
+  providers: [
+    {
+      provide: ProductAdapter,
+      useExisting: BestbuyProductAdapter,
+    },
+    {
+      provide: PRODUCT_NORMALIZER,
+      useExisting: BestbuyProductNormalizer,
+      multi: true,
+    },
+  ],
 })
 export class DataBindingExerciseModule {}

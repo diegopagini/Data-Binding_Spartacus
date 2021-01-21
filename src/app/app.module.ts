@@ -4,16 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { translations, translationChunksConfig } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
+import { DataBindingExerciseModule } from './data-binding-exercise.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    DataBindingExerciseModule,
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
           baseUrl: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443',
-          prefix: '/rest/v2/',
+          prefix: '/occ/v2/',
         },
       },
       context: {
